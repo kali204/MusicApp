@@ -1,0 +1,7 @@
+.main-body {
+    height: 100vh; /* Use vh for height */
+    width: 100vw;
+    background-color: rgb(202, 197, 191);
+    border-radius: 50px;
+    display: flex;
+}
