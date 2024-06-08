@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './sidebar.css';
 import SidebarButton from './sidebarButton';
-import { MdFavorite } from "react-icons/md";
-import { FaGripfire, FaPlay, FaSignOutAlt } from "react-icons/fa";
-import { IoLibrary } from "react-icons/io5";
-import { MdSpaceDashboard } from "react-icons/md";
+import { MdFavorite } from 'react-icons/md';
+import { FaGripfire, FaPlay, FaSignOutAlt } from 'react-icons/fa';
+import { IoLibrary } from 'react-icons/io5';
+import { MdSpaceDashboard } from 'react-icons/md';
+import apiClient from '../../spotify';
 
 export default function Sidebar() {
+  const [image, setImage] = useState(
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdLAY3C19kL0nV2bI_plU3_YFCtra0dpsYkg&usqp=CAU"
+  );
+  useEffect(() => {
+    apiClient.get("me").then((response) => {
+      if(response.data.image && response.data.image.length>0){
+        setImage(response.data.images[0].url);
+      }
+      else
+      {
+        console.error("No Profile image found");
+      }
+    }).catch((error)=>{
+      console.error("Error fetching profile image:",error);
+    });
+  }, []);
+
   return (
     <div className="sidebar-container">
       <img
-        src="https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABc_IAP39hj-kZ8BSec3IQ3zMRFLQvuxISsTH0WbVmISwOd7_gNPUA19gEwg5EkWJFdPrVyeOrDxhCFi08qjHYzABVNdsJHmlQjpw.jpg?r=920"
+        src={image}
         className="profile-img"
         alt="profile"
       />

@@ -1,0 +1,57 @@
+.trending-container {
+  padding: 20px;
+  background-color: #1e2a3e;
+  color: #fff;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.trending-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.trending-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.trending-item {
+  background-color: #282828;
+  border-radius: 8px;
+  overflow: hidden;
+  width: calc(25% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.trending-item:hover {
+  transform: scale(1.05);
+  background-color: #3b3b3b;
+}
+
+.trending-item-cover {
+  width: 100%;
+  height: auto;
+}
+
+.trending-item-info {
+  padding: 10px;
+}
+
+.trending-item-info h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.trending-item-info p {
+  font-size: 14px;
+  color: #b3b3b3;
+}

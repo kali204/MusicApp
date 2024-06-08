@@ -1,0 +1,20 @@
+.controls-container {
+  display: flex;
+  gap: 20px;
+}
+
+.control-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.control-button:focus {
+  outline: none;
+}
+
+.control-button i {
+  pointer-events: none;
+}

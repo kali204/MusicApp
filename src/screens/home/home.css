@@ -1,7 +1,7 @@
-.main-body {
-    height: 100vh; /* Use vh for height */
+.main-body{
+    height: 100vh;
     width: 100vw;
-    background-color: rgb(202, 197, 191);
-    border-radius: 50px;
+    background-color: black;
+    border-radius: 30px;
     display: flex;
 }

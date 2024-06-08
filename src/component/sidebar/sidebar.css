@@ -1,18 +1,21 @@
+/* Sidebar container */
 .sidebar-container {
-    width: 120px;
-    height: 100vh;
-    background-color: #e79e9e;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 20px;
-  }
-  
-  .profile-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 20px;
-    margin-top: 20px;
-  }
-  
+  width: 120px;
+  height: 100vh;
+  background-color: #040306; /* Spotify dark background color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  margin-right: 20px; /* Add margin to separate it from the main body */
+}
+
+/* Profile image */
+.profile-img {
+  width: 60px; /* Increase width for a larger profile image */
+  height: 60px; /* Increase height for a larger profile image */
+  border-radius: 50%; /* Make the image circular */
+  margin-top: 20px;
+  margin-bottom: 20px; /* Add margin at the bottom for spacing */
+}
